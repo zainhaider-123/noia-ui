@@ -1,6 +1,5 @@
 import './styles/style.scss'
-
-import Carousel from "./carousel";
+import Carousel from "./carousel/core";
 
 new Carousel('carousel', {
   slides: 3,
