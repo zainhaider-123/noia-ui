@@ -34,4 +34,4 @@ No test, lint, or format commands are configured yet.
 
 ## Known Issues
 
-- `src/carousal/` — likely a typo for "carousel"
+- None currently

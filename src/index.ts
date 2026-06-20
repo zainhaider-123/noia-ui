@@ -1,6 +1,9 @@
+import './styles/style.scss'
+
 import Carousel from "./carousel";
 
 new Carousel('carousel', {
-  slides: 5,
-  speed: 100
+  loop: true,
+  slides: 8,
+  speed: 300
 })

@@ -1,7 +1,33 @@
-.carousal {
+.carousel {
+  position: relative;
+  overflow: hidden;
+
   .wrapper {
     display: flex;
-    overflow-x: hidden;
-    width: 100%;
+    transition: transform var(--carousel-speed, 300ms) ease;
   }
+
+  .slide {
+    flex-shrink: 0;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+
+    &.carousel-prev {
+      left: 0;
+    }
+
+    &.carousel-next {
+      right: 0;
+    }
+  }
+}
+
+body {
+  font-size: 50px;
 }
