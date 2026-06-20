@@ -11,6 +11,7 @@ class Carousel {
   protected container: HTMLElement;
   protected wrapper: HTMLElement;
   protected currentIndex: number = 0;
+  protected wrapperWidth: number = 0;
   protected slideWidth: number = 0;
 
   constructor(className: string, config: CarouselConfig) {
@@ -41,21 +42,24 @@ class Carousel {
   }
 
   protected calculateSlideWidth() {
-    this.slideWidth = this.container.offsetWidth;
+    this.wrapperWidth = this.container.offsetWidth;
+    this.slideWidth = this.wrapperWidth / this.config.slides;
   }
 
   protected applySlideWidths() {
     this.slidesArray.forEach((slide) => {
-      slide.style.minWidth = `${this.slideWidth}px`;
+      slide.style.width = `${this.slideWidth}px`;
     });
   }
 
   protected createControls() {
+    //Todo: if exist or not, also config btn
     const prevBtn = document.createElement("button");
     prevBtn.className = "carousel-prev";
     prevBtn.textContent = "Prev";
     prevBtn.addEventListener("click", () => this.prev());
 
+    //Todo: if exist or not, also config btn
     const nextBtn = document.createElement("button");
     nextBtn.className = "carousel-next";
     nextBtn.textContent = "Next";
@@ -74,7 +78,7 @@ class Carousel {
   }
 
   goTo(index: number) {
-    const max = this.slidesArray.length - 1;
+    const max = this.slidesArray.length - this.config.slides;
     if (index < 0) {
       if (this.config.loop) {
         index = max;
