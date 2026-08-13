@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "target": "es2023",
-    "module": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "lib": [
       "ES2023",
       "DOM"
@@ -12,13 +13,8 @@
         "src/*"
       ]
     },
-    "types": [
-      "vite/client"
-    ],
     "skipLibCheck": true,
     "ignoreDeprecations": "6.0",
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,

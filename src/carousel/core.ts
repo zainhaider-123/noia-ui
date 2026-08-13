@@ -1,4 +1,4 @@
-import type { CarouselConfig } from "./config.type";
+import type { CarouselConfig } from "./config.type.js";
 
 class Carousel {
   protected className: string;
