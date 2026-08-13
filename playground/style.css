@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #111;
+  color: #f4f4f4;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0 0 1.5rem;
+  color: #bbb;
+}
+
+a {
+  color: #8cb4ff;
+}
+
+.carousel {
+  border-radius: 12px;
+  background: #1c1c1c;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.slide:nth-child(8n + 1) { background: #3b5bdb; }
+.slide:nth-child(8n + 2) { background: #0ca678; }
+.slide:nth-child(8n + 3) { background: #f08c00; }
+.slide:nth-child(8n + 4) { background: #ae3ec9; }
+.slide:nth-child(8n + 5) { background: #c92a2a; }
+.slide:nth-child(8n + 6) { background: #1098ad; }
+.slide:nth-child(8n + 7) { background: #5c7cfa; }
+.slide:nth-child(8n + 8) { background: #37b24d; }
+
+.carousel button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  background: #fff;
+  color: #111;
+  font: inherit;
+}

@@ -1,7 +1,4 @@
-import './styles/style.scss'
-import Carousel from "./carousel/core";
+import "./styles/style.scss";
 
-new Carousel('carousel', {
-  slides: 3,
-  speed: 300
-})
+export { default as Carousel } from "./carousel/core";
+export type { CarouselConfig } from "./carousel/config.type";
